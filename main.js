@@ -5,7 +5,7 @@ const tempData = {
 
     async getApiData() {
         try {
-            const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.country}&units=metric&appid=${this.apiKey}`);
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.city},${this.country}&units=metric&appid=${this.apiKey}`);
             const data = await response.json();
 
             if(data.cod >= 400) {
