@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Weather App</title>
+
+        <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"
+        />
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="text-center"><strong>Weather Info</strong></h1>
+                <p class="text-muted text-center">Get WEATHER info of any city</p>
+
+                <div class="row">
+                    <div class="col-md-6 mx-auto mt-5">
+                        <div id="messageWrapper"></div>
+
+                        <div class="w-form">
+                        <form id="form">
+                            <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="country"
+                                placeholder="Country"
+                            />
+                            <small id="emailHelp" class="form-text text-muted">Type your country name or code. For Example: "Bangladesh" or "BD".</small>
+                            </div>
+                            <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="city"
+                                aria-describedby="emailHelp"
+                                placeholder="City"
+                            />
+                            <small id="emailHelp" class="form-text text-muted">Type your city name. For Example: "Chittagong".</small>
+                            </div>
+
+                            <button type="button" class="btn btn-primary" id="submitBtn">Get Weather Info</button>
+                        </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mx-auto mt-5">
+                        <div class="card">
+                            <div class="card-header text-center" id="wCity"></div>
+            
+                            <ul class="list-group">
+                                <li class="list-group-item text-center">
+                                    <span class="d-block">
+                                    <img alt="" id="wIcon" />
+                                    </span>
+                                    <span id="wFeel"></span>
+                                </li>
+                
+                                <li class="list-group-item px5" id="wTemp"></li>
+                                <li class="list-group-item px5" id="wPressure"></li>
+                                <li class="list-group-item px5" id="wHumidity"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
+
